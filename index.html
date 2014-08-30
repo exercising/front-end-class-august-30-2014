@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Less Lesson</title>
+  <link rel="stylesheet/less" href="less/style.less" type="text/less" >
 </head>
-
 <body>
   <header>
     <h1 class="title">Less-CSS</h1>
@@ -30,5 +29,19 @@
     &copy; 2014 - cool people
   </footer>
 </body>
+  <script>
+  less = {
+    env: "development",
+    async: false,
+    fileAsync: false,
+    poll: 1000,
+    functions: {},
+    dumpLineNumbers: "comments",
+    relativeUrls: false,
+    rootpath: ":/a.com/"
+  };
+</script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
+
 
 </html>
