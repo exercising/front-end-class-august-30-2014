@@ -1,0 +1,17 @@
+body {
+  background: #ffffff;
+  _: 0 ; -webkit-border-radius: 3px;
+  _: 0 ; -khtml-border-radius: 3px;
+  _: 0 ; -moz-border-radius: 3px;
+  _: 0 ; border-radius: 3px;
+}
+body content p {
+  color: #808080;
+}
+body > header {
+  background: #0000ff;
+  padding: 10px;
+}
+body > header h1 {
+  color: #ffffff;
+}

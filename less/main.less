@@ -1,8 +1,54 @@
+.property_(@property, @value) {
+  _: 0 ~"; @{property}:"@value;
+
+}
+.vendor(@property, @value) {
+  .property_('-webkit-@{property}', @value);
+
+.property_('-khtml-@{property}', @value);
+
+.property_('-moz-@{property}', @value);
+
+.property_(@property, @value);
+
+}
+.gradient (@startColor: #eee,
+@endColor: white) {
+  background-color: @startColor;
+
+background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+
+background: -webkit-linear-gradient(top, @startColor, @endColor);
+
+background: -moz-linear-gradient(top, @startColor, @endColor);
+
+background: -ms-linear-gradient(top, @startColor, @endColor);
+
+background: -o-linear-gradient(top, @startColor, @endColor);
+
+}
+html,
 body {
-  background: @white;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  min-height: 100%;
+  .gradient(white, black);
+  .vendor('border-radius', 3px);
   content {
     p {
-      color: @black;
+      color: green;
+    }
+  }
+  @media (max-width: @phone) {
+    background: red;
+    content {
+      p {
+        color: yellow;
+      }
     }
   }
 }
